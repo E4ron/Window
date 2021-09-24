@@ -23,3 +23,28 @@ function createWindow (event) {
     body.className = "body";
     cluse.className = "cluse";
 }
+function closeWindow() {
+    let thisWindow = this.closeWindow("Window");
+    if (thisWindow) {
+        thisWindow.remove();
+    }
+}
+/**
+@param {MouseEvent} event
+ */
+function onMouseDown(event){
+    this.dataset.isMove ="true";
+    this.dataset.x = "" + event.clientX;
+    this.dataset.y = "" + event.clientY;
+    this.parameterElement.style.zIndex = "" + (zIndex++)
+
+}
+/**
+ @param {MouseEvent} event
+ */
+function onMouseUp(event) {
+    this.dataset.1sMove = "false";
+}
+/**
+ @param {MouseEvent} event
+ */
